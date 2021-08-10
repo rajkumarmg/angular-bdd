@@ -1,21 +1,26 @@
-## setup cypress, cucumber with angular application
+## setup cypress, cucumber with angular 12 application
 create new angular application with
+
 ```
-  ng new <app-name>
+ ng new <app-name>
 ```
+
 cd in to <app-name> folder  
 check the angular application running by
 ```
-   yarn start  
+ yarn start  
 ```
+  
 install cypress with
 ```
-  npm install -D cypress
+ npm install -D cypress
 ```
+  
 run the cypress with
 ```
-  yarn cypress open
+ yarn cypress open
 ```
+  
 add the below in the cypress.json config file
 ```
 {
@@ -28,8 +33,9 @@ add the below in the cypress.json config file
 
 install cypress-cucumber-preprocessor with
 ```
-  npm install --save-dev cypress-cucumber-preprocessor
+ npm install --save-dev cypress-cucumber-preprocessor
 ```
+  
 add the below code in cypress/plugins/index.js
 ```
 const cucumber = require('cypress-cucumber-preprocessor').default
@@ -38,6 +44,7 @@ module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 }
 ```
+  
 then add the below line in cypress.json
 ```  
 {
@@ -92,13 +99,22 @@ Then(`I should see {string} as {string}`, (value, element) => {
 })
 ```
   
+Add the below commands under scripts section in package.json
+  ```
+"scripts": {
+  "test:cov": "ng test --no-watch --code-coverage",
+  "test:bdd": "cypress open"
+ } 
+ ``` 
+  
 Save the changes and run 
 ```
-  yarn start
+ yarn start
 ```
-To opn cypress, open another terminal/CMD and run
+
+To open cypress, open another terminal/CMD and run
 ```
-  yarn cypress open
+ yarn test:bdd
 ```
 
 - Integrate cypress with angular: https://indepth.dev/posts/1349/write-better-automated-tests-with-cypress-in-angular
