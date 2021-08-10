@@ -13,7 +13,7 @@ check the angular application running by
   
 install cypress with
 ```
- npm install -D cypress
+ yarn add -D cypress
 ```
   
 run the cypress with
