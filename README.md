@@ -91,6 +91,15 @@ Then(`I should see {string} as {string}`, (value, element) => {
     cy.get(element).should("contain", value)
 })
 ```
+  
+Save the changes and run 
+```
+  yarn start
+```
+To opn cypress, open another terminal/CMD and run
+```
+  yarn cypress open
+```
 
 - Integrate cypress with angular: https://indepth.dev/posts/1349/write-better-automated-tests-with-cypress-in-angular
 
