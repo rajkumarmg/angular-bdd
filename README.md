@@ -20,7 +20,12 @@ run the cypress with
 ```
  yarn cypress open
 ```
-  
+Wait for the cypress ui to show up!
+Stop the cypress on the terminal/cmd and open the project in vs code using 
+```
+ code .
+```
+ 
 add the below in the cypress.json config file
 ```
 {
