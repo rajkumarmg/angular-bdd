@@ -116,8 +116,7 @@ Save the changes and run
 ```
  yarn start
 ```
-
-To open cypress, open another terminal/CMD and run
+Wait for the application to start, then open cypress, open another terminal/CMD and run
 ```
  yarn test:bdd
 ```
